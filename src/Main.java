@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println(" traversal graph ");
 
-        graph1.BFSg(4);
+        graph1.BFSg(1);
     }
 
 
