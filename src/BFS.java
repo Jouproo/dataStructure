@@ -15,6 +15,7 @@ public class BFS {
         }
     }
      public void addEdge(int st , int nd ){
+
         adj[st].add(nd);
    }
    void BFSg(int s){
@@ -39,8 +40,27 @@ public class BFS {
 
    }
 
+    void DFSg(int s){
+        boolean [] visBooleans = new boolean[N];
+        HDFS(s,visBooleans);
+        }
+
+    void HDFS(int s,boolean [] Visited){
+        Visited[s] = true ;
+        System.out.print(s + " ");
+            Iterator<Integer> itr = adj[s].listIterator();
+            while (itr.hasNext()){
+                int n = itr.next();
+                if(!Visited[n]){
+                    HDFS(n,Visited);
+                }
+            }
+
+        }
+
+
+    }
 
 
 
 
-}
